@@ -40,12 +40,12 @@ function DrinkForm() {
           <input
             type="range"
             min="0"
-            max="20"
-            value={saturatedFat}
-            onChange={e => setSaturatedFat(e.target.value)}
+            max="3"
+            value={saturatedFat * 10}
+            onChange={e => setSaturatedFat(e.target.value / 10)}
           />
           <input
-            type="text"
+            type="number"
             value={saturatedFat}
             onChange={e => setSaturatedFat(e.target.value)}
           />

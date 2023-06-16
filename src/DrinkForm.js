@@ -56,7 +56,7 @@ function DrinkForm() {
           <input
             type="range"
             min="0"
-            max="10"
+            max="8"
             value={dietaryFibre}
             onChange={e => setDietaryFibre(e.target.value)}
           />
@@ -72,7 +72,7 @@ function DrinkForm() {
           <input
             type="range"
             min="0"
-            max="500"
+            max="40"
             value={sodium}
             onChange={e => setSodium(e.target.value)}
           />
@@ -88,7 +88,7 @@ function DrinkForm() {
           <input
             type="range"
             min="0"
-            max="1000"
+            max="510"
             value={calories}
             onChange={e => setCalories(e.target.value)}
           />
@@ -104,7 +104,7 @@ function DrinkForm() {
           <input
             type="range"
             min="0"
-            max="50"
+            max="20s"
             value={protein}
             onChange={e => setProtein(e.target.value)}
           />

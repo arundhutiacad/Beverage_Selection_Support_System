@@ -36,7 +36,7 @@ function DrinkForm() {
       </header>
       <form onSubmit={handleSubmit}>
         <label>
-          Saturated Fat:
+          Fat (g):
           <input
             type="range"
             min="0"
@@ -52,7 +52,7 @@ function DrinkForm() {
         </label>
         <br />
         <label>
-          Dietary Fibre:
+          Dietary Fibre (g):
           <input
             type="range"
             min="0"
@@ -68,7 +68,7 @@ function DrinkForm() {
         </label>
         <br />
         <label>
-          Sodium:
+          Sodium (mg):
           <input
             type="range"
             min="0"
@@ -100,7 +100,7 @@ function DrinkForm() {
         </label>
         <br />
         <label>
-          Protein:
+          Protein (g):
           <input
             type="range"
             min="0"

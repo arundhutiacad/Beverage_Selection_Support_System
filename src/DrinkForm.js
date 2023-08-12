@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import './DrinkForm.css';
 
-import starbucks from "./starbuckslogo.png";
-
-
 function DrinkForm() {
   const [saturatedFat, setSaturatedFat] = useState(0);
   const [dietaryFibre, setDietaryFibre] = useState(0);
@@ -34,8 +31,7 @@ function DrinkForm() {
   return (
     <div className="container">
       <header>
-        <img src={starbucks} alt="Logo" /> <br/>
-        <h1>Starbucks Drink Recommender</h1>
+        <h1>Beverage Recommender</h1>
       </header><br/>
       <form onSubmit={handleSubmit}>
         <label>
@@ -59,7 +55,6 @@ function DrinkForm() {
             onChange={e => setSaturatedFat(e.target.value)}
           />
         </label>
-        <br />
         <label>
           Dietary Fibre (g):
           <div className="slider-container">
@@ -80,7 +75,6 @@ function DrinkForm() {
             onChange={e => setDietaryFibre(e.target.value)}
           />
         </label>
-        <br />
         <label>
           Sodium (mg):
           <div className="slider-container">
@@ -101,7 +95,6 @@ function DrinkForm() {
             onChange={e => setSodium(e.target.value)}
           />
         </label>
-        <br />
         <label>
           Calories:
           <div className="slider-container">
@@ -122,7 +115,6 @@ function DrinkForm() {
             onChange={e => setCalories(e.target.value)}
           />
         </label>
-        <br />
         <label>
           Protein (g):
           <div className="slider-container">

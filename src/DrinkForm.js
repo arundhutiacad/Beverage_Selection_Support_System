@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './DrinkForm.css';
 
+import starbucks from "./starbuckslogo.png";
+
+
 function DrinkForm() {
   const [saturatedFat, setSaturatedFat] = useState(0);
   const [dietaryFibre, setDietaryFibre] = useState(0);
@@ -31,21 +34,27 @@ function DrinkForm() {
   return (
     <div className="container">
       <header>
-        <img src="starbuckslogo.png" alt="Logo" /><br/>
+        <img src={starbucks} alt="Logo" /> <br/>
         <h1>Starbucks Drink Recommender</h1>
-      </header>
+      </header><br/>
       <form onSubmit={handleSubmit}>
         <label>
           Fat (g):
+          <div className="slider-container">
+            <span className="min-label">{0}</span>
+            <input
+              type="range"
+              min="0"
+              max="0.3" // Set the maximum value to 0.3
+              step="0.01" // Set the step to 0.01 for more accurate increments
+              value={saturatedFat}
+              onChange={e => setSaturatedFat(e.target.value)}
+            />
+            <span className="max-label">{0.3}</span>
+          </div>
+          <br />
           <input
-            type="range"
-            min="0"
-            max="3"
-            value={saturatedFat * 10}
-            onChange={e => setSaturatedFat(e.target.value / 10)}
-          />
-          <input
-            type="number"
+            type="text"
             value={saturatedFat}
             onChange={e => setSaturatedFat(e.target.value)}
           />
@@ -53,13 +62,18 @@ function DrinkForm() {
         <br />
         <label>
           Dietary Fibre (g):
-          <input
-            type="range"
-            min="0"
-            max="8"
-            value={dietaryFibre}
-            onChange={e => setDietaryFibre(e.target.value)}
-          />
+          <div className="slider-container">
+            <span className="min-label">{0}</span>
+            <input
+              type="range"
+              min="0"
+              max="8"
+              value={dietaryFibre}
+              onChange={e => setDietaryFibre(e.target.value)}
+            />
+            <span className="max-label">{8}</span>
+          </div>
+          <br />
           <input
             type="text"
             value={dietaryFibre}
@@ -69,13 +83,18 @@ function DrinkForm() {
         <br />
         <label>
           Sodium (mg):
-          <input
-            type="range"
-            min="0"
-            max="40"
-            value={sodium}
-            onChange={e => setSodium(e.target.value)}
-          />
+          <div className="slider-container">
+            <span className="min-label">{0}</span>
+            <input
+              type="range"
+              min="0"
+              max="40"
+              value={sodium}
+              onChange={e => setSodium(e.target.value)}
+            />
+            <span className="max-label">{40}</span>
+          </div>
+          <br />
           <input
             type="text"
             value={sodium}
@@ -85,13 +104,18 @@ function DrinkForm() {
         <br />
         <label>
           Calories:
-          <input
-            type="range"
-            min="0"
-            max="510"
-            value={calories}
-            onChange={e => setCalories(e.target.value)}
-          />
+          <div className="slider-container">
+            <span className="min-label">{0}</span>
+            <input
+              type="range"
+              min="0"
+              max="510"
+              value={calories}
+              onChange={e => setCalories(e.target.value)}
+            />
+            <span className="max-label">{510}</span>
+          </div>
+          <br />
           <input
             type="text"
             value={calories}
@@ -101,13 +125,18 @@ function DrinkForm() {
         <br />
         <label>
           Protein (g):
-          <input
-            type="range"
-            min="0"
-            max="20s"
-            value={protein}
-            onChange={e => setProtein(e.target.value)}
-          />
+          <div className="slider-container">
+            <span className="min-label">{0}</span>
+            <input
+              type="range"
+              min="0"
+              max="20s"
+              value={protein}
+              onChange={e => setProtein(e.target.value)}
+            />
+            <span className="max-label">{100}</span>
+          </div>
+          <br />
           <input
             type="text"
             value={protein}
